@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seene Mac install guide</title>
+<meta name="description" content="Step-by-step install guide for Seene on Mac (Apple silicon).">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B0C0E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B0C0E'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23E8A33D' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Seene home"><i aria-hidden="true"></i>SEENE</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="guide-mac.html" aria-current="page">Mac guide</a></li>
+        <li><a href="guide-windows.html">Windows guide</a></li>
+      </ul>
+    </nav>
+    <a class="btn primary small" href="index.html#download">Download</a>
+  </div>
+</header>
+<main id="main" class="guide">
+<section class="guide-hero"><div class="wrap">
+  <span class="eyebrow">Install guide · Mac</span>
+  <h1>Install Seene on your Mac</h1>
+  <p class="lede">About two minutes. Your Mac will show a warning the first time &mdash; that is expected, and the steps below walk you through it.</p>
+  <div class="callout"><b>Why the warning?</b> Seene is a private beta that hasn't been through Apple's public review (notarization) yet. The warning is about Apple's review status, <b>not</b> a problem found in the app.</div>
+  <div class="backbar"><a class="guide-link" href="guides/Seene-Mac-READ-FIRST.pdf">Download this guide as a PDF &darr;</a><a class="guide-link" href="index.html#download">&larr; Back to downloads</a></div>
+</div></section>
+<section><div class="wrap">
+  <h2>You'll need</h2>
+  <ul class="plain">
+    <li>A Mac with <b>Apple silicon</b> (M1 or newer). Not sure? Apple menu &rarr; About This Mac &rarr; Chip.</li>
+    <li>About <b>6 GB</b> of free disk space, and your Mac's administrator password (to install).</li>
+    <li><b>DaVinci Resolve Studio or the free version</b>. Your synced project is built for you either way.</li>
+  </ul>
+  <h2>Setup</h2>
+  <ol class="gsteps">
+    <li><h3>Open the downloaded file and double-click the installer</h3>
+      <p>Open <code>Seene_v2_Mac_Beta.dmg</code>. Inside you'll find <code>Seene_v2_Mac_Installer.pkg</code> (the installer), this guide, and a plain-text copy of the steps. Double-click the installer.</p>
+      <p>macOS says it <b>can't verify</b> the file. Click <b>Done</b>. Do <b>not</b> click &ldquo;Move to Trash&rdquo;.</p></li>
+    <li><h3>Allow it in System Settings</h3>
+      <p>Apple menu &rarr; <b>System Settings</b> &rarr; <b>Privacy &amp; Security</b>. Scroll all the way down to the <b>Security</b> section. You'll see a message about the installer and a button &mdash; click <b>Open Anyway</b>, then enter your password or use Touch ID.</p>
+      <p><b>Don't see Open Anyway?</b> It only appears after step 1 and stays for about an hour. Double-click the installer again, then reopen Privacy &amp; Security.</p></li>
+    <li><h3>Click through the installer</h3>
+      <p>Choose <b>Continue</b>, then <b>Install</b>, and enter your password when asked. When it says the installation was successful, click <b>Close</b>. An older Seene is removed for you.</p></li>
+    <li><h3>Open Seene from Applications</h3>
+      <p>Finder &rarr; Applications &rarr; <b>Seene</b> (or Launchpad). It should open without a second warning.</p>
+      <p>If macOS still blocks the app, open <b>Terminal</b> (&#8984;+Space, type &ldquo;Terminal&rdquo;), paste this line, press Return, then open Seene again:</p>
+      <p><code>xattr -dr com.apple.quarantine /Applications/Seene.app</code></p>
+      <p>It only unlocks Seene, nothing else on your Mac.</p></li>
+    <li><h3>Agree to the beta agreement</h3>
+      <p>The first time, Seene shows a short confidentiality agreement. Enter your <b>name and email</b>, tick the box and click <b>I Agree &mdash; Continue</b>. You do this once on each Mac.</p></li>
+    <li><h3>Drop a card and let it work</h3>
+      <p>Click <b>Choose card or folder</b> (or drag your card in). Seene reads your slates, matches the audio and shows progress; <b>Cancel</b> is there if you want to stop. When it finishes it opens your new synced project in DaVinci Resolve.</p>
+      <p><b>First time with Resolve:</b> if macOS or Seene asks, open System Settings &rarr; Privacy &amp; Security &rarr; <b>Accessibility</b>, switch <b>Seene</b> on, then click Open in DaVinci Resolve again. If Resolve was already open, Seene may ask you to quit it (&#8984;Q) once and try again.</p>
+      <p>Keep your Mac awake and plugged in during big cards, and please don't click around in Resolve while Seene is building your project.</p></li>
+  </ol>
+
+  <h2>If something goes wrong</h2>
+  <div class="faq">
+    <details><summary>No &ldquo;Open Anyway&rdquo; button</summary><p>Redo step 1 (double-click the installer), then reopen Privacy &amp; Security and scroll to the bottom. The button shows for about an hour after each attempt.</p></details>
+    <details><summary>The installer says it's damaged or can't be opened</summary><p>The download may be incomplete. Download it again and compare the checksum shown on the download page with your file's.</p></details>
+    <details><summary>Seene is blocked after installing</summary><p>Run the one-line Terminal command from step 4, then open Seene again.</p></details>
+    <details><summary>A card seems stuck</summary><p>Click Cancel and run it again. Big cards can take a while &mdash; if there's still no movement after a long time, tell us the card size and what the progress text says.</p></details>
+    <details><summary>Seene asks to control Resolve, or to quit and reopen it</summary><p>Switch Seene on in System Settings &rarr; Privacy &amp; Security &rarr; Accessibility. The first time, Seene installs a small helper that Resolve only loads at startup, so quit Resolve completely (&#8984;Q) and click Open in DaVinci Resolve again. This is needed once.</p></details>
+    <details><summary>Resolve doesn't open your project</summary><p>Make sure DaVinci Resolve (Studio or Free) is installed and not showing a dialog box, then try again.</p></details>
+  </div>
+
+  <h2>What Seene records</h2>
+  <table>
+    <tr><th>Sent to us</th><th>Never leaves your Mac</th></tr>
+    <tr><td>Your name and email from the agreement.<br>For each run: card folder name, clip counts, sync results, how long it took.<br>Your Mac model and macOS version, your Resolve version and a random device ID.</td>
+        <td>Your footage and audio files.<br>Anything inside your clips.<br>Seene reads your files where they are &mdash; it never copies or moves your footage.</td></tr>
+  </table>
+  <p class="lede">Run results are sent automatically &mdash; there's nothing to export. When you send feedback, tell us which step you were on and what you saw; a screenshot helps a lot.</p>
+</div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>© 2026 Jatin Kalwani. Seene is in beta and provided as-is.</p>
+    <p>Seene is not affiliated with or endorsed by Blackmagic Design. DaVinci Resolve and Blackmagic RAW are trademarks of Blackmagic Design Pty Ltd.</p>
+  </div>
+</footer>
+</body>
+</html>
